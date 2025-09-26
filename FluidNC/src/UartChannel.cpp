@@ -6,8 +6,6 @@
 #include "Serial.h"                 // allChannels
 
 UartChannel::UartChannel(int num, bool addCR) : Channel("uart_channel", num, addCR) {
-    if(num==0)
-        _report_interval_ms=50;
     _lineedit = new Lineedit(this, _line, Channel::maxLine - 1);
     _active   = false;
 }
